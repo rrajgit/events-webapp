@@ -1,19 +1,16 @@
-export default function Card() {
-	return (
-		<div className="card w-96 glass">
-			<figure>
-				<img
-					src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-					alt="car!"
-				/>
-			</figure>
-			<div className="card-body">
-				<h2 className="card-title">Life hack</h2>
-				<p>How to park your car at your garage?</p>
-				<div className="card-actions justify-end">
-					<button className="btn btn-primary">Learn now!</button>
-				</div>
-			</div>
-		</div>
-	);
+import Link from "next/link";
+
+export default function Card({ card }) {
+  console.log(card);
+  return (
+    <div className="card w-96 glass">
+      <figure className="h-80">
+        <img src={card.Image_URL} alt="car!" />
+      </figure>
+
+      <div className="card-body">
+        <h2 className="card-title">{card.eventName}</h2>
+      </div>
+    </div>
+  );
 }
